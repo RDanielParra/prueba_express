@@ -3,6 +3,7 @@ const app = express();
 const cors = require ('cors');
 
 const PORT = process.env.PORT || 3000
+const HOST = '0.0.0.0'
 
 app.use(cors())
 app.use(express.json())
@@ -26,6 +27,6 @@ app.post('/directivos', (req, res) => {
   res.send('Hello World! directivos');
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
